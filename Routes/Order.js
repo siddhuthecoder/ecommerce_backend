@@ -4,8 +4,8 @@ import { placeOrder, getUserOrder, createOrder } from "../Controllers/Order.js";
 
 const orderRouter = express.Router();
 
-orderRouter.post("/", authenticate, placeOrder);
-orderRouter.get("/", authenticate, getUserOrder);
-orderRouter.post("/payment", authenticate, createOrder);
+orderRouter.post("/", placeOrder);
+orderRouter.get("/", getUserOrder);
+orderRouter.post("/payment", createOrder);
 
 export default orderRouter;
